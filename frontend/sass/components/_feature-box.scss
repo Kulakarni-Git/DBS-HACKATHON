@@ -1,0 +1,20 @@
+.feature-box {
+    font-size: 1.5rem;
+    background-color: rgba($color-grey-light-1,0.8);
+    padding: 2.5rem;
+    border-radius: 3px;
+    text-align: center;
+
+    &__icon {
+        font-size: 3rem;
+        background-image: linear-gradient(to right, $color-lighter, $color-primary);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+        display: inline-block;
+    }
+    
+    
+
+
+}
