@@ -1,0 +1,66 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 50rem;
+    &__side {
+        height: 50rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        backface-visibility: hidden;
+        transition: all .8s ease;
+
+        &--front {
+            background-color: #fff;
+        }
+
+        &--back {
+            color: #fff;
+            transform: rotateY(180deg);
+
+            &-1 {
+                background-image: linear-gradient(to right bottom, rgba($color-secondary-light,0.8), rgba($color-secondary-dark,0.8));
+            }
+
+            &-2 {
+                background-image: linear-gradient(to right bottom, rgba($color-lighter,0.8), rgba($color-darker,0.8));
+            }
+
+            &-3 {
+                background-image: linear-gradient(to right bottom, rgba($color-tertiary-light,0.8), rgba($color-tertiary-dark,0.8));
+            }
+        }
+    }
+
+    &:hover &__side--front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(0);
+    }
+
+
+
+    //STYLING FRONT
+    &__picture {
+        background-blend-mode: screen;
+        background-size: cover;
+        height: 23rem;
+
+        &--1 {
+        background-image: linear-gradient(to right bottom, $color-lighter, $color-darker),url(../img/hero.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),url(../img/hero.jpg);
+            }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark),url(../img/hero.jpg);
+            }
+    }
+}
+
